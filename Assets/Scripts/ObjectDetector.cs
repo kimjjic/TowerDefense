@@ -6,8 +6,8 @@ public class ObjectDetector : MonoBehaviour
     private TowerSpawner towerSpawner;
 
     private Camera mainCamera;
-    private Ray ray;
-    private RaycastHit hit;
+    private Ray ray;   //마우스 방향으로 쏘는 광선
+    private RaycastHit hit;  // 광선에 맞은 오브젝트 정보 저장
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class ObjectDetector : MonoBehaviour
     private void Update()
     {
         //마우스 왼쪽 버튼을 눌렀을 때
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))   // 마우스 왼쪽 = 0 , 오른쪽 = 1
         {
             //카메라 위치에서 화면의 마우스 위치를 관통하는 광선 생성
             //ray.origin : 광선의 시작위치(=카메라 위치)
