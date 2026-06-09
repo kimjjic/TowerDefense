@@ -2092,6 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerSpawner
   towerPrefab: {fileID: 4781721382996713004, guid: 26bd75458e92a0143ba6d3ec5af46862, type: 3}
+  enemySpawner: {fileID: 362911142}
 --- !u!4 &1043922727
 Transform:
   m_ObjectHideFlags: 0
