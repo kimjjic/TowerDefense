@@ -116,6 +116,15 @@ public class TowerWeapon : MonoBehaviour
 
     private void SpawnProjectile()
     {
-        Instantiate(projectilePrefab, spawnPoint.position, Quaternion.identity);
+        GameObject clone = Instantiate(projectilePrefab, spawnPoint.position, Quaternion.identity);
+        //생성된 발사체에게 공격대상(attackTarget)정보 제공
+        clone.GetComponent<Projectile>().Setup(attackTarget);
     }
 }
+
+//적을 공격하는 스킬
+
+//기능
+//ChangeState() - 코루틴을 이용한 FSM에서 상태 변경 함수
+//RotateToRarget() - target 방향으로 이미지 반전
+//SearchTarget() - 현재 타워에 가장 근접한 적 탐색
